@@ -14,7 +14,7 @@ Cette mini appplication consiste à consommer une simple api videos!
 
 #### Cloner le repository git
 ```
-    $ git clone https://github.com/Solonirina/welovecine.git
+$ git clone https://github.com/Solonirina/welovecine.git
 ```
 
 #### Lancer les container
