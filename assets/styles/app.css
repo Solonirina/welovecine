@@ -1,0 +1,38 @@
+
+.navbar {
+    padding-top: 5%;
+}
+.navbar-brand {
+    text-decoration: underline;
+    font-size: 1rem;
+}
+a.navbar-brand {
+    color: #212529;
+}
+
+body {
+    font-size: smaller;
+}
+section {
+    padding-bottom: 1.5em;
+}
+.card-title {
+    font-size: 1.55rem;
+    color: #495057;
+}
+.card-text {
+    text-align: justify;
+}
+.card {
+    margin: 15px 0;
+    cursor: pointer;
+}
+.modal-p-release {
+    font-weight: 400;
+}
+.modal-player {
+    width: 100%;
+}
+.modal-p-overview {
+    text-align: justify;
+}

@@ -1,0 +1,15 @@
+{% for movie in movies %}
+    <div class="card bg-light">
+        <div class="row card-body">
+            <div class="col-md-4">
+                <img class="thumb" src="{{ thumbnails_base_url ~ movie.posterPath }}" alt="minimal-size">
+            </div>
+            <div class="col-md-8">
+                <h5 class="card-title">{{ movie.title }} <small>({{movie.voteCount ~ ' votes'}})</small> </h5> 
+                <span>{{ movie.releaseDate[:4] }}</span>
+                <p class="card-text">{{ movie.overview }}</p>
+                <span class="btn  btn-sm btn-outline-primary rounded-pill show-movie-detail pull-right" data-url-detail="{{ path('movie_detail', {movieId: movie.id}) }}">Voir le details</span>
+            </div>
+        </div>
+    </div>
+{% endfor %}

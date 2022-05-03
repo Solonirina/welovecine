@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <section>
+        <div class="row">
+            <iframe height="400" src="{{ bestMovie.videoUrl }}"></iframe>
+        </div>
+    </section>
+    <section>
+        <div class="row">
+            <div class="form-check col-md-3">
+                {% for genre in genres %}
+                    <div class="form-check">
+                        <input class="form-check-input input-genre" type="checkbox" value="{{ genre.id }}" name="genre_{{ genre.name }}" id="genre_{{ genre.id }}">
+                        <label class="form-check-label" for="genre_{{ genre.id }}">{{ genre.name }}</label>
+                    </div>
+                {% endfor %}
+                <span class="hidden" id="filter-movie-by-genre" data-url="{{ path('filters_movies')}}">
+            </div>
+             <div class="col-md-9" id="bloc-cards">
+                   {{ include('partial/card.html.twig', {movies: topRatedMovies}) }}
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
