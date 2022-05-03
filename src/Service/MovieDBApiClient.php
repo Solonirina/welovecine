@@ -17,7 +17,7 @@ class MovieDBApiClient implements MovieDBApiClientInterface
         $this->apiParams = $apiParams;
     }
 
-    public function requestApi(string $urlPath, array $params = []): mixed
+    public function requestApi(string $urlPath, array $params = []): array
     {
         $response = $this->client->request(
             Request::METHOD_GET,

@@ -33,6 +33,7 @@ class MovieDBService
     public function getTopRatedMovies(int $page = 1): array
     {
         $responses = $this->client->requestApi(Iri::BEST_LIST_MOVIE_URL, ['page' => $page]);
+        
         return array_map(function($result) {
             $movie = $this->denormalizer->denormalize($result ?? [], Movie::class, 'array');
             $movie->setGenresIds($result['genre_ids'] ?? []);
